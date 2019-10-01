@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<script>
+  clearConsole();
+  console.group("HTML Section");
+  startTimer("pageload-html");
+
+  class DebugInfo {
+    constructor() {
+      this.htmlTime = 0;
+      this.headTime = 0;
+      this.bodyTime = 0;
+      this.footerTime = 0;
+    }
+  }
+
+  let debugInfo = new DebugInfo();
+
+
+  function clearConsole() {
+    console.clear();
+  }
+
+  function startTimer(group) {
+    return console.time(group);
+  }
+
+  function endTimer(group) {
+    return console.timeEnd(group);
+  }                 
+</script>
+
+<head>
+  <script>
+    console.group("HEAD SECTION");
+    startTimer("pageload-head");
+  </script>
+  <title>
+
+    <script>
+      console.group("TITLE SECTION");
+      startTimer("pageload-title");
+    </script>
+    Basic HTML5 Structure
+    <script>
+      endTimer("pageload-title");
+      console.group("TITLE SECTION");
+    </script>
+  </title>
+  <style>
+    h1 {
+      color: red;
+    }
+
+    p {
+      color: blue;
+    }
+  </style>
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="style.css">
+  <noscript>
+    JavaScript is not supported or is disabled in browser!
+  </noscript>
+  <script>
+    console.log("JavaScript is supported!");
+  </script>
+  <meta charset="UTF-8">
+
+  <script>
+    debugInfo.headTime = endTimer("pageload-head");
+    console.groupEnd("HEAD Section");
+  </script>
+</head>
+
+<body>
+  <script>
+    console.group("BODY Section");
+    startTimer("pageload-body");
+  </script>
+  <header>
+    <script>
+      console.group("HEADER Section");
+      startTimer("pageload-header");
+    </script>
+    <h1>Welcome to</h1>
+    <h2>my web page</h2>
+    <script>
+      debugInfo.bodyTime = endTimer("pageload-header");
+      console.groupEnd("HEADER Section");
+    </script>
+  </header>
+  <section>
+    <script>
+      console.group("SECTION Section");
+      startTimer("pageload-section");
+    </script>
+    <nav>
+      <script>
+        console.group("NAV Section");
+        startTimer("pageload-nav");
+      </script>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+      <script>
+        debugInfo.bodyTime = endTimer("pageload-nav");
+        console.groupEnd("NAV Section");
+      </script>
+    </nav>
+    <article>
+      <script>
+        console.group("ARTICLE Section");
+        startTimer("pageload-article");
+      </script>
+      Article
+      <script>
+        debugInfo.bodyTime = endTimer("pageload-article");
+        console.groupEnd("ARTICLE Section");
+      </script>
+    </article>
+    <aside>
+      <script>
+        console.group("ASIDE Section");
+        startTimer("pageload-aside");
+      </script>
+      Aside
+      <script>
+        debugInfo.bodyTime = endTimer("pageload-aside");
+        console.groupEnd("ASIDE Section");
+      </script>
+    </aside>
+    <button>button</button>
+    <script>
+      debugInfo.bodyTime = endTimer("pageload-section");
+      console.groupEnd("SECTION Section");
+    </script>
+  </section>
+  <footer>
+    <script>
+      console.group("FOOTER Section");
+      startTimer("pageload-footer");
+    </script>
+    <details>
+      <script>
+        console.group("DETAILS Section");
+        startTimer("pageload-details");
+      </script>
+      <summary>
+        <script>
+          console.group("SUMMARY Section");
+          startTimer("pageload-summary");
+        </script>
+        Copyright 1999-2018.
+        <script>
+          debugInfo.bodyTime = endTimer("pageload-summary");
+          console.groupEnd("SUMMARY Section");
+        </script>
+      </summary>
+      <p> - by Refsnes Data. All Rights Reserved.</p>
+      <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+      <script>
+        debugInfo.bodyTime = endTimer("pageload-details");
+        console.groupEnd("DETAILS Section");
+      </script>
+    </details>
+    <script>
+      debugInfo.bodyTime = endTimer("pageload-footer");
+      console.groupEnd("FOOTER Section");
+    </script>
+  </footer>
+  <script>
+    debugInfo.bodyTime = endTimer("pageload-body");
+    console.groupEnd("BODY Section");
+  </script>
+</body>
+<script>
+  debugInfo.htmlTime = endTimer("pageload-html");
+  console.groupEnd("HTML Section"); 
+</script>
+
+</html>

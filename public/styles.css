@@ -1,0 +1,77 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+h1.default, h2.default, h3.default, h4.default, h5.default, p.default {
+  color: gray;
+}
+
+h1.normal, h2.normal, h3.normal, h4.normal, h5.normal, p.normal {
+  color: cadetblue;
+}
+
+h1.info, h2.info, h3.info, h4.info, h5.info, p.info {
+  color: green;
+}
+
+h1.warning, h2.warning, h3.warning, h4.warning, h5.warning, p.warning {
+  color: orange;
+}
+
+h1.error, h2.error, h3.error, h4.error, h5.error, p.error {
+  color: red
+}
+
+h1.primary, h2.primary, h3.primary, h4.primary, h5.primary, p.primary {
+  color: purple;
+}
+
+h1.secondary, h2.secondary, h3.secondary, h4.secondary, h5.secondary, p.secondary {
+  color: blue;
+}
+
+h1.tertiary, h2.tertiary, h3.tertiary, h4.tertiary, h5.tertiary, p.tertiary {
+  color: brown;
+}
+
+
+button.default {
+  color: white;
+  background-color: gray;
+}
+
+button.normal {
+  color: white;
+  background-color: cadetblue;
+}
+
+button.info {
+  color: white;
+  background-color: green;
+}
+
+button.warning {
+  color: white;
+  background-color: orange;
+}
+
+button.error {
+  color: white;
+  background-color: red
+}
+
+button.primary {
+  color: white;
+  background-color: purple;
+}
+
+button.secondary {
+  color: white;
+  background-color: blue;
+}
+
+button.tertiary {
+  color: white;
+  background-color: brown;
+}
